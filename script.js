@@ -13,9 +13,7 @@ const btnChamar = document.getElementById("btnChamar");
 const guiche = document.getElementById("guiche");
 const historico = document.getElementById("historico");
 
-const btnReset = document.getElementById("btnReset");
 
-btnReset.addEventListener("click", zerarFila);
 
 // som de chamada
 const beep = new Audio("ElevenLabs_Subtle_bell_calendar_reminder_alert,_gentle_two-note.mp3");
@@ -135,6 +133,10 @@ btnChamar.addEventListener("click", () => {
         falarSenha(texto);
     });
 });
+
+const btnReset = document.getElementById("btnReset");
+
+btnReset.addEventListener("click", zerarFila);
 
 function zerarFila() {
     const confirmar = confirm("Tem certeza que deseja zerar a fila?");
