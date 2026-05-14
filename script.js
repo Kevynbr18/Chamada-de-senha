@@ -13,6 +13,10 @@ const btnChamar = document.getElementById("btnChamar");
 const guiche = document.getElementById("guiche");
 const historico = document.getElementById("historico");
 
+const btnReset = document.getElementById("btnReset");
+
+btnReset.addEventListener("click", zerarFila);
+
 // som de chamada
 const beep = new Audio("ElevenLabs_Subtle_bell_calendar_reminder_alert,_gentle_two-note.mp3");
 beep.preload = "auto";
@@ -131,3 +135,29 @@ btnChamar.addEventListener("click", () => {
         falarSenha(texto);
     });
 });
+
+function zerarFila() {
+    const confirmar = confirm("Tem certeza que deseja zerar a fila?");
+
+    if (!confirmar) return;
+
+    // zera contadores
+    contadorNormal = 0;
+    contadorPreferencial = 0;
+
+    // limpa senha exibida
+    senhas.textContent = "---";
+    senhas.className = "";
+
+    // limpa histórico
+    historico.innerHTML = "";
+
+    // cancela voz
+    speechSynthesis.cancel();
+
+    // opcional: reseta som
+    beep.pause();
+    beep.currentTime = 0;
+
+    alert("Fila zerada com sucesso!");
+}
