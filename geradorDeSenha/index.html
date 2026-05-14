@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gerador de senha📔📔</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="conteiner">
+        <h1>Sistema Senha</h1>
+
+        <div class="datahora">
+            <h2 id="data"></h2>
+            <h2 id="hora"></h2>
+        </div>
+
+        <button id="btnGerar">Gerar Senha Normal</button>
+        <button id="btnPreferencial">Gerar Preferencial</button>
+
+        <div class="senhaBox">
+            <h2>Última Senha:</h2>
+            <h1 id="senha">---</h1>
+        </div>
+
+        <div class="guiche">
+            <label>Guichê:</label>
+            <select id="guiche">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+            </select>
+        </div>
+
+        <button id="btnChamar">Chamar Senha</button>
+        <button id="btnReset">Zerar Fila</button>
+
+        <h2>Últimas chamadas</h2>
+        <ul id="historico"></ul>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
