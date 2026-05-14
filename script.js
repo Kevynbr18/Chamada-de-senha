@@ -44,18 +44,24 @@ atualizarDataHora();
 btnGerar.addEventListener("click", gerarNormal);
 btnPreferencial.addEventListener("click", gerarPreferencial);
 
+// gerar senha normal
 function gerarNormal() {
     contadorNormal++;
 
     const senha = "A" + String(contadorNormal).padStart(3, "0");
+
     senhas.textContent = senha;
+    senhas.className = ""; // limpa cor
 }
 
+// gerar senha preferencial
 function gerarPreferencial() {
     contadorPreferencial++;
 
     const senha = "P" + String(contadorPreferencial).padStart(3, "0");
+
     senhas.textContent = senha;
+    senhas.className = "preferencial"; // aplica cor vermelha
 }
 
 // ======================

@@ -62,7 +62,6 @@ button:hover {
 
 .senhaBox h1 {
     font-size: 40px;
-    color: #1e3c72;
 }
 
 .guiche {
@@ -76,4 +75,8 @@ select {
     border: 1px solid #ccc;
     margin-left: 5px;
     cursor: pointer;
+}
+.preferencial {
+    color: red;
+    font-weight: bold;
 }
